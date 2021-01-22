@@ -1,95 +1,34 @@
 .main__nav{
-  width: 100%;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  z-index: 700;
-}
-
-.main__nav__img{
-  width: 60px;
-  padding: 10px;
-  filter: drop-shadow(0 0.2rem 0.2rem #000000);
-}
-
-.main__nav__button {
-  display: none;
-}
-
-.main__nav__link {
-  display: flex;
-  align-items: center;
-}
-
-.main__nav__link a {
-  padding: 15px;
-  line-height: 50px;
-  text-decoration: none;
-  color: #000000;
-  font-weight: 800;
-  text-shadow: 1px 1px 10px #000000;
-}
-
-.main__nav__link a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#signal {
-  display: none;
-}
-
-@media (max-width:600px) {
-    .main__nav__button {
-    display: inline-block;
+    width: 100%;
     position: fixed;
-    right: 0px;
-    top: 0px;
-    z-index: 800;
-    }
-    .main__nav__button label {
-        background-color: teal;
-        width: 80px;
-        height: 65px;
-        cursor: pointer;
+    display: flex;
+    z-index: 900;
+}
 
-    }
-    .main__nav__button label:hover, #signal:checked ~ .main__nav__button label {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-    label span {
-        display: block;
-        position: relative;
-        width: 60px;
-        height: 8px;
-        background-color: white;
-        margin: 10px;
-        border-radius: 5px;
-    }
-    .main__nav__link {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        border-bottom-right-radius: 50px;
-        width: max-content;
-        background-color: #ffffff;
-        height: 0px;
-        transition: all 0.4s ease-in-out;
-        overflow-y: hidden;
-        padding:0 15px ;
-        top: 0px;
-        left: 0px;
-    }
-    .main__nav__link a {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-    .main__nav #signal:not(:checked) ~ .main__nav__link {
-        height: 0px;
-    }
-    .main__nav #signal:checked ~ .main__nav__link {
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-    }
+.main__nav--link {
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+    background-color: khaki;
+}
+
+.main__nav--logo{
+    position: absolute;
+    top: inherit;
+    width: 60px;
+    left: 10%;
+    /* filter: drop-shadow(0 0.2rem 0.2rem #000000); */
+    
+}
+
+.main__nav--link a {
+    padding: 20px 35px;
+    font-size: 1.16rem;
+    text-decoration: none;
+    color: #000000;
+    transition: .1s ease-in;
+}
+
+.main__nav--link a:hover {
+    color: var(--text-color);
 }
