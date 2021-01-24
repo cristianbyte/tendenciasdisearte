@@ -1,73 +1,121 @@
 html{
-    --text-color: #e8505b;
-    --background-color: #ffffff;
-    --text-color-alt: #000000;
-    --text-color-opposite: #ffffff;
-    --button-color: #3742fa;
+    --text-color: black;
+    --background-color: #eef1f9;
+    --color-card: #01ce99;
+    --color-card-line:#5650f7;
+    --color-card-alt: #f7b900;
+    scroll-behavior: smooth;
 }
 
 html,body{
-  overflow: hidden;
-  font-family:'Opens Sans',helvetica;  
+  overflow-y: hidden;
+  font-family: Arial, Helvetica, sans-serif;  
   height:100vh;
-  width:100%;
 }
 
-::-moz-selection { color: white;  background: gold; }
-::selection      { color: white;  background: gold; }
+::-moz-selection { color: var(--background-color);  background: var(--text-color); }
+::selection      { color: var(--background-color);  background: var(--text-color); }
 
-.main__slider{
+.non-selectable {
+   -moz-user-select: none; 
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none; 
+}
+
+.main{
     width: max-content;
     height: 100%;
     display: flex;
     flex-direction: row;
     background-color: var(--background-color);
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
-.box--welcome{
-    font-size: 1.5rem;
+.main__home{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box__welcome{
     width: 50%;
     padding-left: 10%;
     color: var(--text-color);
 }
-.box--welcome h1{
-    width: 60%;
-}
-.box--welcome p{
-    color: var(--text-color-alt);
+
+.box__welcome--h1{
+    font-size: 4.5rem;
+    color: #313131;
+    font-weight: bold;
+    animation: colorchange 3s infinite alternate-reverse;
 }
 
-.box--picture{
+.box__welcome--p{
+    max-width: max(500px, 70%);
+    font-size: 2.2rem;
+}
+.box__picture{
     width: 50%;
+    height: fit-content;
     padding-right: 5%;
+    filter: drop-shadow(2px 5px 5px #000000);
 }
-
-.main__slider__box{
-    width: 100vw;
-    height: 100%;
+.main__card{
+    width: fit-content;
+    height: 80%;
+    margin: auto 0;
     display: flex;
-}
-
-
-.main__slider__box--home{
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
-.box--galery{
-    float:left;
-    overflow-y: inherit;
-    overflow-x: hidden;
-    height: 100%;
-    padding-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
-    grid-template-rows: repeat(3, fit-content);
-    grid-gap: 50px;
+.card{
+    width: 40vh;
+    height: 12vh;
+    border-radius: 30px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    box-shadow: 1px 1px 30px #62626233;
+    transition: .3s ease-in-out;
+    transform: scale(1);
 }
-.box--galery img{
-    width: 400px;
+
+.card:hover{
+    background-color: var(--color-card);
+    color: var(--background-color);
+    box-shadow: 1px 1px 30px var(--color-card);
+}
+
+
+.card:first-child{
+    animation: float 2s .5s infinite ease-in-out alternate-reverse;
+}
+.card:nth-child(2n){
+    animation: float 3s 1s infinite ease-in-out alternate-reverse;
+}
+.card:last-child{
+    animation: float 2s .3s infinite ease-in-out alternate-reverse;
+}
+
+.card--img, .card--p{
+    width: 40%;
+    padding: 5%;
+    font-size: 2.4vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: inherit;
+}
+
+@keyframes float{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.95);
+    }
 }

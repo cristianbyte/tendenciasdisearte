@@ -9,5 +9,3 @@ let mouseWheelEvt = function (event) {
     return false;
 }
 document.body.addEventListener("mousewheel", mouseWheelEvt);
-
-document.getElementById('deny-scroll').onwheel = function(){ return false; }

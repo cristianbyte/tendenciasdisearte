@@ -12,55 +12,43 @@
 </head>
 <body>
 
-    <img class="main__nav--logo" src="img/logo-da.png" alt="picture" srcset="">
+    <div class="nav">
+        <a class="nav__item non-selectable nav__item--active" id="home" href="#main__home">Inicio</a>
+        <a class="nav__item non-selectable" id="store">Tienda</a>
+        <a class="nav__item non-selectable" id="design" >Diseña</a>
+    </div>
 
-    <div class="main__nav main__nav--link">
+    <div class="main">
+        <div class="main__home" id="main__home">
+            <div class="box__welcome" >
+                <h1 class="box__welcome--h1" >Llena tu hogar de vida con más arte</h1>
+                <p class="box__welcome--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quia assumenda sint, dolore tenetur cumque illum.</p>
+            </div>
 
+            <img class="box__picture" src="pic/picture2.png" alt="">
+        </div>
 
+        <div class="main__card">
+
+            <div class="card">
+                <img class="card--img" src="svg/lens.svg" alt="">
+                <p class="card--p" >Cuidamos cada detalle en lo que hacemos</p>
+            </div>
+            <div class="card">
+                <img class="card--img" src="svg/picture.svg" alt="">
+                <p class="card--p" >Decora tu hogar con lo que mas te gusta</p>
+            </div>
+            <div class="card">
+                <img class="card--img" src="svg/wand.svg" alt="">
+                <p class="card--p" >Crea tu propio diseño en instantes.</p>
+            </div>
+        </div>
 
     </div>
 
-    
 
-    <div class="main__slider">
-
-        <div class="main__slider__box main__slider__box--home">
-            <div id="home" class="box--welcome" >
-                <h1>Llena tu hogar de vida con más arte</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quia assumenda sint, dolore tenetur cumque illum.</p>
-            </div>
-            <div class="box--picture">
-                <img src="svg/picture.svg" alt="">
-            </div>
-        </div>
-
-        <div class="main__slider__box">
-            <div id="deny-scroll" class="box--galery">
-                <img src="https://picsum.photos/450/450" alt="" srcset="">
-                <img src="https://picsum.photos/451/450" alt="" srcset="">
-                <img src="https://picsum.photos/450/451" alt="" srcset="">
-                <img src="https://picsum.photos/451/451" alt="" srcset="">
-                <img src="https://picsum.photos/449/450" alt="" srcset="">
-                <img src="https://picsum.photos/450/449" alt="" srcset="">
-            </div>
-        </div>
-
-        <div class="main__slider__box main__slider__box--choise">
-            <div class="box__triple">
-                <div class="box--contact">
-
-                </div>
-                <div class="box--store">
-
-                </div>
-                <div class="box-design">
-
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script src="script/scroll.x.js"></script>
     <script src="script/cursor.js"></script>
+    <script src="script/nav.selector.js"></script>
+    <script src="script/scroll.x.js"></script>
 </body>
 </html>

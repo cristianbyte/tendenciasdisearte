@@ -1,34 +1,70 @@
-.main__nav{
-    width: 100%;
-    position: fixed;
-    display: flex;
-    z-index: 900;
-}
-
-.main__nav--link {
-    width: 100%;
-    bottom: 0;
-    justify-content: center;
-    background-color: khaki;
-}
-
-.main__nav--logo{
+.nav{
     position: absolute;
-    top: inherit;
-    width: 60px;
-    left: 10%;
-    /* filter: drop-shadow(0 0.2rem 0.2rem #000000); */
-    
+    padding-top: 5%;
+    padding-left: 10%;
 }
 
-.main__nav--link a {
-    padding: 20px 35px;
-    font-size: 1.16rem;
-    text-decoration: none;
-    color: #000000;
-    transition: .1s ease-in;
+.nav__item{
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: ease-in-out .4s;
 }
 
-.main__nav--link a:hover {
-    color: var(--text-color);
+.nav__item--active{
+    mix-blend-mode: difference;
+    background-color: var(--background-color);
+    width: 200px;
+    padding-left: 40px;
+    border-radius: 3px;
+}
+
+
+/*     box-shadow: -10px -10px 15px #ffffff80,
+                10px 10px 15px #2e2e2e2d,
+                inset -10px -10px 15px #2e2e2e2d, 
+                inset 10px 10px 15px #ffffff80 ;
+    background-color: #ececec; */
+
+
+
+.arrow:active{
+    transform: scale(0.95);
+}
+
+.arrow__left{
+    left: 2%;
+    opacity: 0.1;
+    cursor: not-allowed;
+}
+.arrow__right{
+    right: 2%;
+    cursor: pointer;
+}
+
+@keyframes outline-change {
+    0%{
+        outline: solid 5px #ff0000;
+        outline-offset: 0px;
+    }
+    15%{
+        outline-color: #ffa500;
+    }
+    30%{
+        outline-color: #ffff00;
+    }
+    50%{
+        outline: solid 10px#32cd32;
+    }
+    60%{
+        outline-color: #00bcd4;
+    }
+    80%{
+        outline-color: #4b008288;
+    }
+    100%{
+        outline: solid 5px #ee82ee;
+    }
 }
