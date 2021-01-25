@@ -1,0 +1,38 @@
+.nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 5px #00000066;
+    width: 100%;
+    z-index: 1000;
+}
+.nav__item{
+    display: block;
+    font-size: 2vh;
+    padding: 2vh 2vh;
+    cursor: pointer;
+    width: 33%;
+    text-align: center;
+    transition: ease-in-out .3s;
+}
+
+.nav__item--active{
+    background-color: var(--text-color);
+    border-radius: 3px;
+    color: white !important;
+}
+
+/* Drag and Drop */
+
+.drop-area{
+    height: 100%;
+    width: 20%;
+    background-color: white;
+    box-shadow: 2px 2px 5px #00000066;
+    z-index: 900;
+}
+.drop-area__image{
+    height: 50%;
+    background-color: thistle;
+}
