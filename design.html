@@ -17,15 +17,29 @@
         <a class="nav__item non-selectable nav__item--active" id="design" >Diseña</a>
     </div>
 
-    <div class="drop-area">
-        <div class="drop-area__image">
-            
+    <div class="area">
+        <div class="preview-area">
+
         </div>
-        <div class="drop-area__background">
-            Próximamaente...
+    
+        <div class="edit-area">
+            <div class="edit-area__front">
+    
+                <img id="img-preview" src="" alt="">
+    
+                <label class="img-uploader__btn" for="img-uploader" >Subir Imagen
+                    <img class="img-uploader__btn--img" src="img/cloud-computing.png" alt="" srcset="">
+                </label>
+                <input type="file" name="" id="img-uploader" accept="image/*" >
+    
+            </div>
+            <div class="edit-area__background">
+                Próximamaente...
+            </div>
         </div>
     </div>
 
     <script src="script/nav.selector.js"></script>
+    <script src="script/upload.image.js"></script>
 </body>
 </html>
