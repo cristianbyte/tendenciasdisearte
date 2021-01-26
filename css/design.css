@@ -15,6 +15,7 @@
     width: 33%;
     text-align: center;
     transition: ease-in-out .3s;
+    color: #000000;
 }
 .nav__item--active{
     background-color: var(--text-color);
@@ -37,9 +38,48 @@
 .preview-area{
     grid-column: 1/5 ;
     height: 100%;
-    background-color: #000000;
+    background: #ffffff;
+    background-image: linear-gradient(#00000022 .1em, transparent .1em), linear-gradient(90deg, #00000022 .1em, transparent .1em);
+    background-size: 3em 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.portrait-img{
+    width: 70%;
+    box-shadow: 1px 1px 0px#000000,
+                2px 2px 0px#000000,
+                3px 3px 1px#000000,
+                4px 4px 1px#000000,
+                4px 4px 10px#000000;
+
+}
+.portrait-select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.portrait-select__figure{
+    cursor: pointer;
+}
+.portrait-select__figure--active{
+    animation: .4s blinking alternate infinite ease-out;
+    border: 5px  solid #000000;
+    border-radius: 5px;
+}
+
+@keyframes blinking{
+    0%,20%{
+        border-color: #00000000;
+    }
+    100%{
+        border-color: #000000ff;
+    }
+}
 
 /* EDIT AREA */
 
@@ -52,32 +92,52 @@
 }
 
 .edit-area__front{
-    height: 60vh;
+    position: relative;
+    height: 70vh;
     /* border: 3px dashed #00000088; */
     overflow: hidden;
-    display: grid;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     padding: 0;
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(1, 1fr);
     margin:0 5%;
     box-sizing: border-box;
 }
+.edit-img{
+    position: relative;
+    visibility: hidden;
+    cursor: pointer;
+    /* -webkit-text-stroke: 0px unset; */
+    width: min(100%, 200px);
+}
+.edit-img__btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: white;
+}
+
+.edit-img__btn:hover{
+    transform: scale(1.1);
+}
 
 #img-preview{
-    grid-row: 2/5;
-    grid-column: 1/2;
-    width: 50%;
+    width: 100%;
 }
 
 .img-uploader__btn{
-    display: block;
+    display: inline;
     border-radius: 5px;
     background-color: black;
     cursor: pointer;
     color: white;
     text-align: center;
     padding: 1%;
-    grid-row: 9/10;
+    justify-self: flex-end;
     font-weight: 500;
     transition: all .2s ease-in;
 }

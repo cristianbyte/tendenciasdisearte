@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +12,24 @@
 <body>
 
     <div class="nav" id="nav">
-        <a class="nav__item non-selectable " id="home" href="#main__home">Inicio</a>
-        <a class="nav__item non-selectable" id="store">Tienda</a>
-        <a class="nav__item non-selectable nav__item--active" id="design" >Diseña</a>
+        <a class="nav__item non-selectable " id="home" href="/">Inicio</a>
+        <a class="nav__item non-selectable" id="store" href="/">Tienda</a>
+        <a class="nav__item non-selectable nav__item--active" id="design" href="/design.html">Diseña</a>
     </div>
 
     <div class="area">
         <div class="preview-area">
+            <img class="portrait-img" id='portrait-img' src="" alt="">
 
         </div>
     
         <div class="edit-area">
             <div class="edit-area__front">
     
-                <img id="img-preview" src="" alt="">
+                <div class="edit-img">
+                    <img class="edit-img__img" id="img-preview" src="" alt="">
+                    <img id="delete-img" class="edit-img__btn" src="img/cancelar.png" alt="" srcset="">
+                </div>
     
                 <label class="img-uploader__btn" for="img-uploader" >Subir Imagen
                     <img class="img-uploader__btn--img" src="img/cloud-computing.png" alt="" srcset="">
@@ -33,8 +37,9 @@
                 <input type="file" name="" id="img-uploader" accept="image/*" >
     
             </div>
-            <div class="edit-area__background">
-                Próximamaente...
+            <div class="portrait-select">
+                <img class="portrait-select__figure " src="img/portrait-one.png" alt="" srcset="">
+                <img class="portrait-select__figure portrait-select__figure--active" src="img/portrait-two.png" alt="" srcset="">
             </div>
         </div>
     </div>
