@@ -19,8 +19,9 @@
 
     <div class="area">
         <div class="preview-area">
-            <img class="portrait-img" id='portrait-img' src="" alt="">
-
+            <canvas id="portrait-img" width="1000px" height="1000px" > 
+                ¡Ops!, your browser does not support the canvas tag.
+            </canvas>
         </div>
     
         <div class="edit-area">
@@ -38,13 +39,16 @@
     
             </div>
             <div class="portrait-select">
-                <img class="portrait-select__figure " src="img/portrait-one.png" alt="" srcset="">
-                <img class="portrait-select__figure portrait-select__figure--active" src="img/portrait-two.png" alt="" srcset="">
+
+             <!--    <img class="portrait-select__figure " src="img/portrait-one.png" alt="" srcset="">
+                <img class="portrait-select__figure portrait-select__figure--active" src="img/portrait-two.png" alt="" srcset=""> -->
+
             </div>
         </div>
     </div>
 
     <script src="script/nav.selector.js"></script>
     <script src="script/upload.image.js"></script>
+    <script src="script/portrait.js"></script>
 </body>
 </html>

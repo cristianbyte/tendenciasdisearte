@@ -36,50 +36,31 @@
 /* PREVIEW AREA*/
 
 .preview-area{
-    grid-column: 1/5 ;
+    grid-column: 1/5;
+    width: 100%;
     height: 100%;
     background: #ffffff;
     background-image: linear-gradient(#00000022 .1em, transparent .1em), linear-gradient(90deg, #00000022 .1em, transparent .1em);
     background-size: 3em 3em;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .portrait-img{
+    background-color: #000000;
+}
+
+
+/* .portrait-img{
     width: 70%;
     box-shadow: 1px 1px 0px#000000,
                 2px 2px 0px#000000,
                 3px 3px 1px#000000,
                 4px 4px 1px#000000,
                 4px 4px 10px#000000;
+} */
 
-}
-.portrait-select{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.portrait-select__figure{
-    cursor: pointer;
-}
-.portrait-select__figure--active{
-    animation: .4s blinking alternate infinite ease-out;
-    border: 5px  solid #000000;
-    border-radius: 5px;
-}
-
-@keyframes blinking{
-    0%,20%{
-        border-color: #00000000;
-    }
-    100%{
-        border-color: #000000ff;
-    }
-}
 
 /* EDIT AREA */
 
@@ -154,4 +135,32 @@
 }
 
 
-#img-uploader{display: none;}
+ #img-uploader{display: none;}
+
+
+
+/*
+.portrait-select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.portrait-select__figure{
+    cursor: pointer;
+}
+.portrait-select__figure--active{
+    animation: .4s blinking alternate infinite ease-out;
+    border: 5px  solid #000000;
+    border-radius: 5px;
+}
+
+@keyframes blinking{
+    0%,20%{
+        border-color: #00000000;
+    }
+    100%{
+        border-color: #000000ff;
+    }
+} */
