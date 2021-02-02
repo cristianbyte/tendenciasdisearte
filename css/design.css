@@ -29,16 +29,16 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-row: 1fr;
-    height: 100%;
+    height: 94vh;
     width: 100%;
 }
 
 /* PREVIEW AREA*/
 
-.preview-area{
+#preview-area{
     grid-column: 1/5;
     width: 100%;
-    height: 100%;
+    height: 94vh;
     background: #ffffff;
     background-image: linear-gradient(#00000022 .1em, transparent .1em), linear-gradient(90deg, #00000022 .1em, transparent .1em);
     background-size: 3em 3em;
@@ -52,15 +52,15 @@
 }
 
 
-/* .portrait-img{
-    width: 70%;
-    box-shadow: 1px 1px 0px#000000,
-                2px 2px 0px#000000,
+
+
+canvas{
+    box-shadow: 1px 1px 1px#000000,
+                2px 2px 1px#000000,
                 3px 3px 1px#000000,
                 4px 4px 1px#000000,
                 4px 4px 10px#000000;
-} */
-
+}
 
 /* EDIT AREA */
 
@@ -70,18 +70,19 @@
     box-shadow: -2px 2px 5px #00000066;
     z-index: 900;
     right: 0;
+    height: 94vh;
+    width: 20vw;
 }
 
-.edit-area__front{
+.edit-area__load{
     position: relative;
-    height: 70vh;
+    height: 60vh;
     /* border: 3px dashed #00000088; */
     overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
-    padding: 0;
-    margin:0 5%;
+    padding: 1vh;
     box-sizing: border-box;
 }
 .edit-img{
@@ -90,6 +91,7 @@
     cursor: pointer;
     /* -webkit-text-stroke: 0px unset; */
     width: min(100%, 200px);
+    justify-self: self-start;
 }
 .edit-img__btn{
     position: absolute;
@@ -111,7 +113,6 @@
 }
 
 .img-uploader__btn{
-    display: inline;
     border-radius: 5px;
     background-color: black;
     cursor: pointer;
@@ -135,9 +136,58 @@
 }
 
 
- #img-uploader{display: none;}
+#img-uploader{display: none;}
 
 
+
+
+/* EDIT AREA SIZE  */
+
+/* [type="radio"]:checked,
+[type="radio"]:not(:checked){
+    width: 0;
+    height: 0;
+    visibility: hidden;
+} */
+
+.edit-area__size{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 34vh;
+    padding: 1vh;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+
+.option-size__label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid #00000066;
+    border-radius: 5px;
+    height: 5vh;
+    margin: .5vh 0;
+}
+.label__img,.label__span,.label__radio{
+    width: 33%;
+}
+
+.label__span{
+    line-height: 5vh;
+    text-align: center;
+    font-size: 2vh;
+}
+
+.label__img{
+    height: 5vh;
+}
 
 /*
 .portrait-select{

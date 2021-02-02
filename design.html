@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="css/alert.css">
 </head>
 <body>
+
+    <div class="alert non-selectable " id="alert" title="Touch for close" >
+
+    </div>
 
     <div class="nav" id="nav">
         <a class="nav__item non-selectable " id="home" href="/">Inicio</a>
@@ -18,37 +23,65 @@
     </div>
 
     <div class="area">
-        <div class="preview-area">
-            <canvas id="portrait-img" width="1000px" height="1000px" > 
+        <div id="preview-area">
+            <canvas id="portrait-img" width="204px" height="437px" > 
                 ¡Ops!, your browser does not support the canvas tag.
             </canvas>
         </div>
     
         <div class="edit-area">
-            <div class="edit-area__front">
+            <div class="edit-area__load">
     
                 <div class="edit-img">
                     <img class="edit-img__img" id="img-preview" src="" alt="">
                     <img id="delete-img" class="edit-img__btn" src="img/cancelar.png" alt="" srcset="">
                 </div>
     
-                <label class="img-uploader__btn" for="img-uploader" >Subir Imagen
+                <label class="img-uploader__btn" for="img-uploader" title="Load Image">Subir Imagen
                     <img class="img-uploader__btn--img" src="img/cloud-computing.png" alt="" srcset="">
                 </label>
                 <input type="file" name="" id="img-uploader" accept="image/*" >
     
             </div>
-            <div class="portrait-select">
+            <form class='edit-area__size non-selectable' id="editAreaSize">
+                <!-- non-selectable -->
 
+                    <label class="option-size__label" for="radio1">
+                        <input class="label__radio" type="radio" name="rads" id='radio1' value='23x50' />
+                        <span class="label__span" >23x50</span>
+                        <img class="label__img" src="svg/23x50.svg" alt="" srcset="">
+                    </label>
+
+                    <label class="option-size__label" for="radio2">
+                        <input class="label__radio" type="radio" name="rads" id='radio2' value='35x40' />
+                        <span class="label__span" >35x40</span>
+                        <img class="label__img" src="svg/35x40.svg" alt="" srcset="">
+                    </label>
+
+                    <label class="option-size__label" for="radio3">
+                        <input class="label__radio" type="radio" name="rads" id='radio3' value='40x70' />
+                        <span class="label__span" >40x70</span>
+                        <img class="label__img" src="svg/40x70.svg" alt="" srcset="">
+                    </label>
+
+                    <label class="option-size__label" for="radio4">
+                        <input class="label__radio" type="radio" name="rads" id='radio4' value='50x70' />
+                        <span class="label__span" >50x70</span>
+                        <img class="label__img" src="svg/50x70.svg" alt="" srcset="">
+                    </label>
+
+            </form>
+            <span id="result"></span>
              <!--    <img class="portrait-select__figure " src="img/portrait-one.png" alt="" srcset="">
                 <img class="portrait-select__figure portrait-select__figure--active" src="img/portrait-two.png" alt="" srcset=""> -->
 
-            </div>
+    
         </div>
     </div>
 
     <script src="script/nav.selector.js"></script>
     <script src="script/upload.image.js"></script>
     <script src="script/portrait.js"></script>
+    <script src="script/alert.js"></script>
 </body>
 </html>
