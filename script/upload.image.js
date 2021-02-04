@@ -6,7 +6,10 @@ const canvasWriter = document.getElementById('preview-area')
 var radVal = undefined
 let url = undefined
 let imageExists = false
-let sizeOfCanvas = .65
+let sizeOfCanvas
+(screen.width > screen.height) ? sizeOfCanvas = .6 : sizeOfCanvas = .28
+console.log(sizeOfCanvas)
+
 
 buttonUpload.addEventListener('change',(data) =>{  
     const image = data.target.files[0];
@@ -94,7 +97,7 @@ editAreaSize.addEventListener('click', ()=>{
 
 function loadBigImage(url, widthSize, heightSize, numOfPortraits, firstIncrease, secondIncrease) {
 
-    let heightEditArea = ((window.screen.width*sizeOfCanvas)/70)*heightSize;
+    let heightEditArea = ((window.screen.height*sizeOfCanvas)/70)*heightSize;
     heightEditArea= Math.trunc(heightEditArea)
 
     let widthEditArea = (heightEditArea/heightSize)*widthSize

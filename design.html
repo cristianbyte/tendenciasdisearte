@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="css/alert.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
 
@@ -17,9 +18,9 @@
     </div>
 
     <div class="nav" id="nav">
-        <a class="nav__item non-selectable " id="home" href="index.html">Inicio</a>
-        <a class="nav__item non-selectable" id="store" href="https://instagram.com/tendeciasdiseart">Galeria</a>
         <a class="nav__item non-selectable nav__item--active" id="design" href="/design.html">Diseña</a>
+        <a class="nav__item non-selectable" id="store" href="https://instagram.com/tendeciasdiseart">Galeria</a>
+        <a class="nav__item non-selectable " id="home" href="index.html">Inicio</a>
     </div>
 
     <div class="area">
@@ -37,7 +38,8 @@
                     <img id="delete-img" class="edit-img__btn" src="img/cancelar.png" alt="" srcset="">
                 </div>
     
-                <label class="img-uploader__btn" for="img-uploader" title="Load Image">Subir Imagen
+                <label class="img-uploader__btn" for="img-uploader" title="Load Image">
+                    <p>Subir Imagen</p>
                     <img class="img-uploader__btn--img" src="img/cloud-computing.png" alt="" srcset="">
                 </label>
                 <input type="file" name="" id="img-uploader" accept="image/*" >
@@ -123,9 +125,12 @@
         <img class="contact__icon" src="svg/wp.svg" alt="contactWhatsapp" srcset="">
     </a>
 
+    <div class="mycontact">Site by
+        <a class="mycontact__link" href="http://instagram.com/cristtianjj" target="_blank" rel="noopener noreferrer"> Cristtianjj</a>
+    </div>
+
     <script src="script/nav.selector.js"></script>
     <script src="script/upload.image.js"></script>
-    <script src="script/portrait.js"></script>
     <script src="script/alert.js"></script>
     <script src="script/contact.share.js"></script>
 </body>

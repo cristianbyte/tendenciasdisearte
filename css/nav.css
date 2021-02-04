@@ -23,6 +23,13 @@
     color: white !important;
 }
 
+@media (orientation: portrait) {
+    .nav__item{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
 /*     box-shadow: -10px -10px 15px #ffffff80,
                 10px 10px 15px #2e2e2e2d,
                 inset -10px -10px 15px #2e2e2e2d, 

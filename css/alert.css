@@ -45,3 +45,20 @@
     font-weight: 500;
     color:  white;
 }
+
+@media (orientation: portrait) {
+    .alert{
+        bottom: 23vh;
+        left: 3vw;
+    }
+
+    .alert__icon{
+        width: 20px;
+        padding-right: 5px;
+    }
+    
+    .alert__message{
+        font-size: 1rem;
+        color:  white;
+    }
+}

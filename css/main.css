@@ -63,7 +63,7 @@
 }
 
 .main__card{
-    width: 700px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -96,4 +96,27 @@
     color: var(--text-color);
     background-color: white;
     margin: auto 1rem;
+}
+
+.mycontact{
+    position: fixed;
+    font-size: .8rem;
+    bottom: 20px;
+    left: 20px;
+    font-weight: 600;
+    opacity: .3;
+}
+
+.mycontact__link{
+    color: purple;
+}
+
+@media (orientation: portrait) {
+    .box__welcome--h1{
+        font-size: 2rem;
+        animation: colorchange 5s infinite alternate-reverse; 
+    }
+    .box__welcome--p{
+        font-size: 1rem;
+    }
 }

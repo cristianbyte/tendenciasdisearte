@@ -39,7 +39,7 @@ html,body{
 
 .contact{
     position: absolute;
-    width: 4.5rem;
+    width: 4rem;
     bottom: 5%;
     right: 25%;
     z-index: 1002;
