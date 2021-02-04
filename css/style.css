@@ -1,6 +1,6 @@
 
 html{
-    --text-color: rgb(131, 131, 131); 
+    --text-color: #000000; 
     --background-color: #eef1f9; /* eef1f9 292929*/ 
     --color-card: #01ce99;
     --color-card-line:#5650f7;
@@ -45,7 +45,7 @@ html,body{
     right: 25%;
     z-index: 1002;
     box-sizing: content-box;
-    
+    cursor: pointer;
 }
 
 .contact__icon{
