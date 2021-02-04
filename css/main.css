@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 .main{
     width: max-content;
     height: 100%;
@@ -21,16 +23,19 @@
 }
 
 .box__welcome--h1{
-    font-size: 4.5rem;
-    color: #313131;
-    font-weight: bold;
-    animation: colorchange 3s infinite alternate-reverse;
+    font-size: 4rem;
+    font-family: 'Carter One', cursive;
+    color: #80208C;
+    text-shadow: 0px 1px 3px #80208Caa;
+    /* animation: colorchange 5s infinite alternate-reverse; */
 }
 
 .box__welcome--p{
     max-width: max(500px, 70%);
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    color: rgb(131, 131, 131);
 }
+
 .box__picture{
     width: 50%;
     height: fit-content;
@@ -40,27 +45,21 @@
 
 @keyframes colorchange{
     0%{
-        color: #9400D3;
+        color: #D973AB;
+        text-shadow: 2px 2px 3px #D973ABaa;
     }
-    15%{
-        color: #4B0082;
+    33%{
+        color: #80208C;
+        text-shadow: 2px 2px 3px #80208Caa;
     }
-    30%{
-        color: #0000FF;
-    }
-    50%{
-        color: #00FF00;
-    }
-    70%{
-        color: #FFFF00;
-    }
-    85%{
-        color: #FF7F00;
+    66%{
+        color: #4ABFD9;
+        text-shadow: 2px 2px 3px #4ABFD9aa;
     }
     100%{
-        color: #FF0000;
+        color: #F2CD88;
+        text-shadow: 2px 2px 3px #F2CD88aa;
     }
-
 }
 
 .main__card{

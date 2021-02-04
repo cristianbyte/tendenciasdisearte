@@ -12,6 +12,7 @@
     margin: 0.5rem 0;
     cursor: pointer;
     transition: ease-in-out .4s;
+    color: rgb(131, 131, 131);
 }
 
 .nav__item--active{

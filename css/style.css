@@ -1,5 +1,6 @@
+
 html{
-    --text-color: black; 
+    --text-color: rgb(131, 131, 131); 
     --background-color: #eef1f9; /* eef1f9 292929*/ 
     --color-card: #01ce99;
     --color-card-line:#5650f7;
@@ -8,19 +9,19 @@ html{
 }
 
 html,body{
-  overflow-y: hidden;
-  font-family: Arial, Helvetica, sans-serif;  
-  height:100vh;
+    overflow-y: hidden;
+    font-family: sans-serif;
+    height:100vh;
 }
 
 ::-moz-selection { color: var(--background-color);  background: var(--text-color); }
 ::selection      { color: var(--background-color);  background: var(--text-color); }
 
 .non-selectable {
-   -moz-user-select: none; 
-   -webkit-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 ::-webkit-scrollbar-track{
@@ -49,15 +50,14 @@ html,body{
 
 .contact__icon{
     width: 100%;
-    animation: bouncing 8s ease-in-out infinite;
+    animation: bouncing 5s ease-in-out infinite;
 }
 
 @keyframes bouncing {
     0%   { transform: scale(1,1)      translateY(0); }
     1%  { transform: scale(1.05,.95)   translateY(0); }
-    3%  { transform: scale(.95,1.05)   translateY(-14px); }
+    3%  { transform: scale(.95,1.05)   translateY(-7px); }
     4%  { transform: scale(1.05,.95) translateY(0); }
-    6%  { transform: scale(1,1)      translateY(-7px); }
     7%  { transform: scale(1,1)      translateY(0); }
     100% { transform: scale(1,1)      translateY(0); }
 }
