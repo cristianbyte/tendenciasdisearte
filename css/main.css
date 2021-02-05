@@ -14,6 +14,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .box__welcome{
@@ -24,17 +25,43 @@
 
 .box__welcome--h1{
     font-size: 4rem;
-    font-family: 'Carter One', cursive;
-    color: #80208C;
-    text-shadow: 0px 1px 3px #80208Caa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-card-line);
+    text-shadow: 1px 1px 5px var(--color-card-line);
     /* animation: colorchange 5s infinite alternate-reverse; */
+    margin: 20px 0;
 }
 
 .box__welcome--p{
     max-width: max(500px, 70%);
     font-size: 1.5rem;
-    color: var(--text-color);
+    color: #00000099;
+    box-sizing: content-box;
 }
+
+.box__welcome--btn{
+    position: relative;
+    background-color: var(--color-card-line);
+    color: var(--background-color);
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-sizing: content-box;
+    transition: .3s ease-in-out;
+    
+}
+
+.box__welcome--btn:hover{
+    box-shadow: 0 0 10px var(--color-card-line),
+    0 0 20px var(--color-card-line),
+    0 0 40px var(--color-card-line);
+}
+
+
 
 .box__picture{
     width: 50%;
@@ -43,27 +70,8 @@
     filter: drop-shadow(2px 5px 5px #000000);
 }
 
-@keyframes colorchange{
-    0%{
-        color: #D973AB;
-        text-shadow: 2px 2px 3px #D973ABaa;
-    }
-    33%{
-        color: #80208C;
-        text-shadow: 2px 2px 3px #80208Caa;
-    }
-    66%{
-        color: #4ABFD9;
-        text-shadow: 2px 2px 3px #4ABFD9aa;
-    }
-    100%{
-        color: #F2CD88;
-        text-shadow: 2px 2px 3px #F2CD88aa;
-    }
-}
-
 .main__card{
-    width: 100vw;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -76,7 +84,7 @@
     transition: all .5s ease-in-out;
     transform-style: preserve-3d;
     display: flex;
-    width: 50vh;
+    width: 45vh;
     height: min-content;
     flex-direction: row;
     justify-content: center;
@@ -108,13 +116,12 @@
 }
 
 .mycontact__link{
-    color: purple;
+    color: var(--color-card-line);
 }
 
 @media (orientation: portrait) {
     .box__welcome--h1{
         font-size: 2rem;
-        animation: colorchange 5s infinite alternate-reverse; 
     }
     .box__welcome--p{
         font-size: 1rem;

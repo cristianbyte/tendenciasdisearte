@@ -8,14 +8,12 @@ let url = undefined
 let imageExists = false
 let sizeOfCanvas
 (screen.width > screen.height) ? sizeOfCanvas = .6 : sizeOfCanvas = .28
-console.log(sizeOfCanvas)
-
 
 buttonUpload.addEventListener('change',(data) =>{  
     const image = data.target.files[0];
 
     if(!image){
-        callingAlert(1,'¡Ops!, no encontre la foto.')
+        callingAlert(2,'¡Ops!, no encontre la foto.')
         littleImageVisible.style.setProperty('visibility', 'hidden');
         imageExists = false
         return;
@@ -121,6 +119,7 @@ function loadBigImage(url, widthSize, heightSize, numOfPortraits, firstIncrease,
                 let center = (littleImage.naturalWidth-width)/2
 
                 ctx.drawImage(image,center,0,width,height,0,0,widthEditArea,heightEditArea)
+                copyright(ctx, heightEditArea)
             }
             image.src = url;
         }
@@ -151,6 +150,8 @@ function loadBigImage(url, widthSize, heightSize, numOfPortraits, firstIncrease,
             ctx1.drawImage(image,   0,      0,  width,  height, 0,  0,  widthEditArea,  heightEditArea)
             ctx2.drawImage(image,   width,  0,  width,  height, 0,  0,  widthEditArea,  heightEditArea)
             ctx3.drawImage(image,   width*2,0,  width,  height, 0,  0,  widthEditArea,  heightEditArea)
+            copyright(ctx1, heightEditArea)
+
         }
 
         image.src = url;
@@ -199,18 +200,22 @@ function loadBigImage(url, widthSize, heightSize, numOfPortraits, firstIncrease,
             ctx3.drawImage(image,   center,            0,  width,  height, 0,  0,  widthEditArea,  heightEditArea2)
             ctx4.drawImage(image,   center+width,      (height/(heightSize+firstIncrease+secondIncrease))*(secondIncrease/2),  width,  height, 0,  0,  widthEditArea,  heightEditArea2)
             ctx5.drawImage(image,   center+width*2,    (height/(heightSize+firstIncrease+secondIncrease))*((firstIncrease+secondIncrease)/2),  width,  height, 0,  0,  widthEditArea,  heightEditArea2)
+            copyright(ctx1, heightEditArea)
         }
 
         image.src = url;
     }
 
+}
 
-    
-
+function copyright(context, heighteditarea){
+    context.beginPath() 
+    context.fillStyle="white"; 
+    context.font="1.3vh Times New Roman, serif ";
+    context.fillText('@tendenciasdisearte',5,heighteditarea-5); 
 }
 
 deleteButton.addEventListener('click', ()=>{
     imageExists = false
     littleImageVisible.style.setProperty('visibility', 'hidden');
 })
-

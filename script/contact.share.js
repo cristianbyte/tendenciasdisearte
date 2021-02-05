@@ -10,22 +10,22 @@ console.log(includeShare)
 contact.addEventListener('click', ()=>{
     if(includeShare){
         if (turn) {
-            window.open('https://wa.me/573137673755?text=¡Hola!, necesito más informacion.')
+            window.open('https://wa.me/573024627133?text=¡Hola!, necesito más informacion.')
         } else {
-            window.open('https://instagram.com/tendenciasdiseart')
+            window.open('https://www.instagram.com/tendenciasdisearte/')
         }
     }
     else if (turn) {
         if(radVal !== undefined){
             messaje = '¡Hola!,necesito más informacion sobre este cuadro ' + radVal
-            window.open('https://wa.me/573137673755?text=' + messaje)
+            window.open('https://wa.me/573024627133?text=' + messaje)
         }
         else{
             messaje = '¡Hola!, necesito una asesoria.'
-            window.open('https://wa.me/573137673755?text=' + messaje)
+            window.open('https://wa.me/573024627133?text=' + messaje)
         }
     } else {
-        window.open('https://t.me/cristtianjj')
+        window.open('https://t.me/')
     }
 })
 

@@ -13,8 +13,8 @@ html,body{
     height:100vh;
 }
 
-::-moz-selection { color: var(--background-color);  background: var(--text-color); }
-::selection      { color: var(--background-color);  background: var(--text-color); }
+::-moz-selection { color: var(--color-card-alt);  background: var(--color-card-line); }
+::selection      { color: var(--color-card-alt);  background: var(--color-card-line); }
 
 .non-selectable {
     -moz-user-select: none; 
@@ -34,7 +34,7 @@ html,body{
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--text-color);
+    background-color: var(--color-card-line);
 }
 
 .contact{

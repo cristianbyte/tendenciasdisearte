@@ -6,13 +6,13 @@ function callingAlert(icon = 0, message = 'Something is wrong' ){
 
     switch (icon) {
         case 0:
-            newAlert.style.setProperty('background-color', 'green')
+            newAlert.style.setProperty('background-color', 'var(--color-card)')
             break
         case 1:
-            newAlert.style.setProperty('background-color', '#f58634')
+            newAlert.style.setProperty('background-color', 'var(--color-card-alt)')
             break
         case 2: 
-            newAlert.style.setProperty('background-color', 'red')
+            newAlert.style.setProperty('background-color', '#ff0251')
             break
     }
 

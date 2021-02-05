@@ -12,11 +12,11 @@
     margin: 0.5rem 0;
     cursor: pointer;
     transition: ease-in-out .4s;
-    color: var(--text-color);
+    color: #00000099;
 }
 
 .nav__item--active{
-    background-color: var(--text-color);
+    background-color: var(--color-card-line);
     width: 200px;
     padding-left: 40px;
     border-radius: 3px;
