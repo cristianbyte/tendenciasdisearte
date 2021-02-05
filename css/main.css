@@ -2,14 +2,14 @@
 
 .main{
     width: max-content;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     background-color: var(--background-color);
-    overflow: hidden;
 }
 
 .main__home{
+    position: relative;
     width: 100vw;
     height: 100%;
     display: flex;
@@ -61,8 +61,6 @@
     0 0 40px var(--color-card-line);
 }
 
-
-
 .box__picture{
     width: 50%;
     height: fit-content;
@@ -71,7 +69,9 @@
 }
 
 .main__card{
-    width: 50vw;
+    position: relative;
+    width: 70vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -80,17 +80,15 @@
 }
 
 .card{
-    position: relative;
     transition: all .5s ease-in-out;
-    transform-style: preserve-3d;
     display: flex;
     width: 45vh;
     height: min-content;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background-color: white;
     box-shadow: 4px 4px 2px 0px #00000022;
+    box-sizing: border-box;
+    margin: 0 1vw;
+    box-sizing: content-box;
 }
 
 .card--img{
@@ -98,12 +96,13 @@
 }
 
 .card--p{
-    font-size: 2.2vh;
+    font-size: 2.4vh;
     width: 30vh;
     font-weight: 500;
     color: var(--text-color);
     background-color: white;
-    margin: auto 1rem;
+    margin: auto .5rem;
+    color: #00000099;
 }
 
 .mycontact{
@@ -112,18 +111,79 @@
     bottom: 20px;
     left: 20px;
     font-weight: 600;
-    opacity: .3;
+    opacity: .5;
 }
 
 .mycontact__link{
     color: var(--color-card-line);
 }
+.card:first-child{
+    align-self: flex-start;
+ }
+ .card:last-child{
+     align-self: flex-end;
+  }
 
 @media (orientation: portrait) {
+    .main{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main__home{
+        margin: 10vh 0 0% 0 ;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .box__welcome{
+        padding: 0;
+        width: 70%;
+    }
+
     .box__welcome--h1{
         font-size: 2rem;
     }
     .box__welcome--p{
         font-size: 1rem;
     }
+    .box__welcome--btn{
+        font-size: 1rem;
+        width: fit-content;
+    }
+
+    .box__picture{
+        padding: 0;
+        width: 70%;
+    }
+
+    .main__card{
+        height: 70vh;
+        width: 100vw;
+    }
+
+    .card{
+        margin: 0 2vw;
+        width: 80vw;
+    }
+    .card--img{
+        height: 15vh;
+    }
+
+    .mycontact{
+        position: relative;
+        background-color: var(--color-card-line);
+        line-height: 1.4rem;
+        opacity: 1;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        color: white;
+    }
+    .mycontact__link{
+        color: var(--color-card);
+    }
+
 }

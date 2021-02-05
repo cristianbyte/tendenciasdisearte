@@ -7,7 +7,7 @@ var radVal = undefined
 let url = undefined
 let imageExists = false
 let sizeOfCanvas
-(screen.width > screen.height) ? sizeOfCanvas = .6 : sizeOfCanvas = .28
+(screen.width > screen.height) ? sizeOfCanvas = .65 : sizeOfCanvas = .23
 
 buttonUpload.addEventListener('change',(data) =>{  
     const image = data.target.files[0];

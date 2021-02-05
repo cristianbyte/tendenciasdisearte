@@ -10,7 +10,6 @@ html{
 html,body{
     overflow-y: hidden;
     font-family: sans-serif;
-    height:100vh;
 }
 
 ::-moz-selection { color: var(--color-card-alt);  background: var(--color-card-line); }
@@ -29,6 +28,7 @@ html,body{
 }
 
 ::-webkit-scrollbar{
+    width: 0px;
     height: 10px;
     background-color: #F5F5F5;
 }
@@ -38,7 +38,7 @@ html,body{
 }
 
 .contact{
-    position: absolute;
+    position: fixed;
     width: 4rem;
     bottom: 5%;
     right: 25%;
@@ -59,4 +59,11 @@ html,body{
     4%  { transform: scale(1.05,.95) translateY(0); }
     7%  { transform: scale(1,1)      translateY(0); }
     100% { transform: scale(1,1)      translateY(0); }
+}
+
+@media (orientation: portrait) {
+    html,body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
 }
